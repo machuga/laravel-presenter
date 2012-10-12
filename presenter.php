@@ -17,7 +17,7 @@ class Presenter
 	public function __get($key)
 	{
 		if (method_exists($this, $key)) {
-			return $this->{$key}();
+			return $this->$key = $this->{$key}();
 		} else {
 			return $this->resource->$key;
 		}
